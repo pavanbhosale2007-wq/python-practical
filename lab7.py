@@ -1,16 +1,6 @@
-"""
-TEXT ANALYZER TOOL (Basic Version - No Functions)
--------------------------------------------------
-Concept Demonstrated: Strings, Indexing, Slicing, String Traversal
 
-The user enters a paragraph, and the program analyzes it to count:
-    - Total characters
-    - Total words
-    - Total vowels
-    - Total spaces
-    - Total consonants
-    - Total digits
-"""
+#TEXT ANALYZER TOOL 
+ 
 
 print("=" * 45)
 print("             TEXT ANALYZER TOOL")
@@ -38,7 +28,7 @@ vowels = "aeiouAEIOU"
 
 # --------------- Traversal using indexing ---------------
 for i in range(len(paragraph)):
-    ch = paragraph[i]       # accessing character using index
+    ch = paragraph[i]       
 
     if ch == " ":
         space_count = space_count + 1
@@ -53,10 +43,9 @@ for i in range(len(paragraph)):
         digit_count = digit_count + 1
 
     else:
-        other_count = other_count + 1       # punctuation, symbols, etc.
-
+        other_count = other_count + 1      
 # --------------- Word Count ---------------
-words = paragraph.split()       # splits paragraph into a list of words
+words = paragraph.split()       
 word_count = len(words)
 
 # --------------- Display Results ---------------
