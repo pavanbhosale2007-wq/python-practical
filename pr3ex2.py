@@ -1,16 +1,10 @@
-#placement eligibility
+marks = float(input("Enter graduation score: "))
+backlogs = int(input("Enter number of active backlogs: "))
 
-score = float(input("Enter graduation score (%):"))
-backlogs = int(input("Enter number of backlogs:"))
-
-if score >= 70 and backlogs == 0:
-    print("candidate is eligible for placement.")
-
-else:
-    print("candidate is not eligible for placement.")
-
-    if score < 70 and backlogs ==0:
-        print("Reason:graduation score is below 70%.")
-
+if marks >= 70:
+    if backlogs == 0:
+        print("Eligible for Placement")
     else:
-        print("Reason:candidate has active backlogs.")
+        print("Not Eligible: Active backlogs are present")
+else:
+    print("Not Eligible: Graduation score is below 70%")

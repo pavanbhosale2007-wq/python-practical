@@ -1,11 +1,24 @@
-age = int(input("Enter age:"))
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+income = float(input("Enter annual family income: "))
+caste = input("Enter your caste (SC/ST/OBC/General): ").upper()
 
-income = float(input("Enter annual income:"))
-
-caste = input("enter your caste (SC/ST/NT/OBC/OPEN):")
-
-if age < 25 and income < 300000 and caste in ["SC" "ST" "NT" "OBC"]:
-    print("you are eligible for scholorship:")
-
+if age < 25:
+    if income < 300000:
+        if caste in ["SC", "ST", "OBC","NT","VJT"]:
+            print("Eligible for Specialized Education Scholarship")
+            result="Eligible for Specialized Education Scholarship"
+        else:
+            print("Not Eligible: Caste is General")
+            result="Not Eligible "
+    else:
+        print("Not Eligible: Income is 300000 or above")
 else:
-    print("you are not eligible for scholorship:")
+    print("Not Eligible: Age must be below 25")
+
+print("====================== Display ===================")
+print(" Name : ",name)
+print(" Age : ",age)
+print(" Income : ",income)
+print(" Caste : ",caste)
+print("Status",result)
